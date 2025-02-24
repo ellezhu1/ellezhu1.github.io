@@ -1,1 +1,0 @@
-{"version":3,"sourceRoot":"","sources":["../../_sass/ellezhu_main.scss"],"names":[],"mappings":"AAAA;EACI;;;AAGJ;EACI","sourcesContent":[".current {\r\n    color: green;\r\n}\r\n\r\nh1 {\r\n    color: red;\r\n}"],"file":"styles.css"}

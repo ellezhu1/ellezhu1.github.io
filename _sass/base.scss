@@ -1,0 +1,76 @@
+@import url('https://gist.github.com/ramzs/42cb1b6e0bf3005e69ac.js');
+@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
+
+/* Layout */
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: hsl(178, 60%, 60%);
+}
+
+.inner {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+}
+
+header {
+    margin: 10px;
+    padding: 30px;
+    border-image-slice:25%;
+    border-image-width:30px;
+    border-image-repeat:round;
+    border-image-source:url("https://mdn.github.io/css-examples/tools/border-image-generator/border-image-6.svg");
+    border-style:solid;
+    background: hsl(178, 70%, 77%);
+}
+
+header h1 {
+    font-size: 50px;
+    color: hsl(272, 75%, 70%);
+    margin: 0;
+    
+}
+
+nav {
+    padding: 10px;
+    background-color: #967E3A;
+    border-radius: 5px;
+}
+
+nav a.button {
+    display: inline-block;
+    background: #D6AF4C;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#main-content {
+    float: left;
+    width: 800px;
+}
+
+aside#sidebar {
+    float: right;
+    width: 200px;
+    min-height: 1000px;
+    background: #A084B9;
+}
+
+/* General elements */
+
+a.button {
+    width: 100px;
+    height: 50px;
+    padding: 10px;
+    background: #68C8C5;
+    border-radius: 8px;
+}
+
+a.button:hover {
+    background: #9AEDEA;
+}
+
+table, td {
+    border: 0.1rem solid black;
+}
