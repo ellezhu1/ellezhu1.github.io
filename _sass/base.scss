@@ -5,72 +5,91 @@
 
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background: hsl(178, 60%, 60%);
+    background: radial-gradient(#8253ac, #d0a22f, #8253ac, hsl(43, 35%, 60%));
 }
 
 .inner {
     position: relative;
-    margin: 0 auto;
+    margin: auto;
     width: 80%;
 }
 
+/* header */
+
 header {
     margin: 10px;
-    padding: 30px;
+    padding: auto;
+    text-align: center;
     border-image-slice:25%;
     border-image-width:30px;
     border-image-repeat:round;
     border-image-source:url("https://mdn.github.io/css-examples/tools/border-image-generator/border-image-6.svg");
     border-style:solid;
-    background: hsl(178, 70%, 77%);
+    border-radius: 10px;
+    background: hsl(178, 30%, 60%);
 }
 
 header h1 {
     font-size: 50px;
-    color: hsl(272, 75%, 70%);
-    margin: 0;
-    
+    color: hsl(272, 75%, 50%);
+    text-shadow: 5px 2px hsl(178, 30%, 50%);
+}
+header a {
+    text-decoration: none;
 }
 
-nav {
-    padding: 10px;
-    background-color: #967E3A;
-    border-radius: 5px;
+/* main content area */
+
+main {
+    float: left;
+    width: 65%;
+    padding: 0.25% 2%;
+    margin: 1%;
+    background-color: hsl(44, 44%, 80%);
+    border: 10px double  hsl(44, 63%, 57%);
+}
+
+#page-title {
+    position:relative;
+    font-size: 50px;
+    background-color: hsl(272, 55%, 40%);
+    margin: 1% -6%;
+    padding: 1% 8%;
+    width: 80%;
+    box-shadow: 15px 5px hsl(44, 44%, 50%);
+}
+
+#page-title::after {
+    position: absolute;
+    left: 100%;
+    content:"";
+    border:25px solid hsl(272, 55%, 30%);
+    border-right-color: transparent;
+}
+
+/* navigation */
+
+aside {
+    float: right;
+    width: 18%;
+    padding: 2%;
+    margin: 1%;
+    background-color: hsl(272, 27%, 62%);
+    border-radius: 5%;
+    border-top: solid 5px hsl(272, 75%, 62%);
+    border-right: solid 5px hsl(272, 75%, 52%);
 }
 
 nav a.button {
-    display: inline-block;
-    background: #D6AF4C;
+    display: block;
+    background: hsl(272, 27%, 62%);
     border-radius: 5px;
     padding: 5px;
-}
-
-#main-content {
-    float: left;
-    width: 800px;
-}
-
-aside#sidebar {
-    float: right;
-    width: 200px;
-    min-height: 1000px;
-    background: #A084B9;
-}
-
-/* General elements */
-
-a.button {
-    width: 100px;
-    height: 50px;
-    padding: 10px;
-    background: #68C8C5;
-    border-radius: 8px;
+    margin: 10px;
+    height: auto;
 }
 
 a.button:hover {
     background: #9AEDEA;
 }
 
-table, td {
-    border: 0.1rem solid black;
-}
