@@ -9,18 +9,18 @@
   </head>
 
   <body>
-    <header class="inner">
+    <header class="inner shadow">
       <a href="{{ '/' | absolute_url }}"><h1>{{ site.title }}</h1></a>
       <h3>{{ site.description }}</h3>
     </header>
   
     <div class="inner">
-      <main>
+      <main class="shadow">
         <h1 id="page-title">{{ page.title }}</h1>
         {{ content }}
       </main>
 
-      <aside>
+      <aside class="shadow">
         <h3>For More</h3>
         {% include navigation.html %}
       </aside>

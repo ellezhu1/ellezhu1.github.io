@@ -10,9 +10,12 @@ body {
   margin: auto;
   width: 80%; }
 
+.shadow {
+  box-shadow: 5px 5px 10px #393939; }
+
 /* header */
 header {
-  margin: 10px;
+  margin: 0 30px;
   padding: auto;
   text-align: center;
   border-image-slice: 25%;
@@ -21,7 +24,7 @@ header {
   border-image-source: url("https://mdn.github.io/css-examples/tools/border-image-generator/border-image-6.svg");
   border-style: solid;
   border-radius: 10px;
-  background: #7ab8b6; }
+  background: linear-gradient(#59a6a3, #9cc9c8); }
 
 header h1 {
   font-size: 50px;
@@ -62,14 +65,13 @@ aside {
   width: 18%;
   padding: 2%;
   margin: 1%;
-  background-color: #a084b8;
+  background: linear-gradient(#a084b8, #9f8bb1);
   border-radius: 5%;
   border-top: solid 5px #a355e7;
   border-right: solid 5px #8b29e0; }
 
 nav a.button {
   display: block;
-  background: #a084b8;
   border-radius: 5px;
   padding: 5px;
   margin: 10px;
@@ -77,3 +79,22 @@ nav a.button {
 
 a.button:hover {
   background: #9AEDEA; }
+
+img {
+  padding: 10px;
+  width: 80%;
+  height: auto;
+  margin: auto; }
+
+div.gallery {
+  margin: 5px;
+  padding: 5px;
+  float: left;
+  width: 300px;
+  align-content: center;
+  border: 5px solid #d0a22f;
+  box-shadow: 5px 5px #b89a47; }
+
+div.gallery:hover {
+  box-shadow: none;
+  margin: 10px 0 0 10px; }
