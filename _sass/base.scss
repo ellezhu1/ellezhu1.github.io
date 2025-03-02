@@ -1,5 +1,4 @@
 @import url('https://gist.github.com/ramzs/42cb1b6e0bf3005e69ac.js');
-@import url('https://fonts.googleapis.com/css?family=Architects+Daughter');
 
 /* Layout */
 
@@ -8,22 +7,17 @@ body {
     background: radial-gradient(#8253ac, #d0a22f, #8253ac, hsl(43, 35%, 60%));
 }
 
-.inner {
+header, main, menu, footer {
     position: relative;
     margin: auto;
-    width: 80%;
-}
-
-.shadow {
     box-shadow: 5px 5px 10px #393939;
 }
 
 /* header */
 
-header {
-    margin: 0 30px;
-    padding: auto;
-    text-align: center;
+header, footer {
+    width: 85%;
+    padding: 10px 30px;
     border-image-slice:25%;
     border-image-width:30px;
     border-image-repeat:round;
@@ -31,10 +25,11 @@ header {
     border-style:solid;
     border-radius: 10px;
     background: linear-gradient(hsl(178, 30%, 50%), hsl(178, 30%, 70%));
+    text-align: center;
 }
 
 header h1 {
-    font-size: 50px;
+    font-size: 4rem;
     color: hsl(272, 75%, 50%);
     text-shadow: 5px 2px hsl(178, 30%, 50%);
 }
@@ -45,47 +40,40 @@ header a {
 /* main content area */
 
 main {
-    float: left;
     width: 65%;
-    padding: 0.25% 2%;
-    margin: 1%;
+    padding: 20px;
+    border: 10px double  hsl(44, 63%, 57%);    
     background-color: hsl(44, 44%, 80%);
-    border: 10px double  hsl(44, 63%, 57%);
 }
 
 #page-title {
     position:relative;
-    font-size: 50px;
-    background-color: hsl(272, 55%, 40%);
-    margin: 1% -6%;
-    padding: 1% 8%;
+    margin: 5px -40px;
     width: 80%;
-    box-shadow: 15px 5px hsl(44, 44%, 50%);
+    padding: 5px 30px;
+    background-color: hsl(272, 55%, 40%);
+    box-shadow: 15px 5px hsl(44, 44%, 50%);    
+    font-size: 3rem;    
 }
 
 #page-title::after {
     position: absolute;
     left: 100%;
-    content:"";
-    border:25px solid hsl(272, 55%, 30%);
+    border: 1.5rem solid hsl(272, 55%, 30%);
     border-right-color: transparent;
+    content:"";   
 }
 
 /* navigation */
 
-aside {
-    float: right;
-    width: 18%;
-    padding: 2%;
-    margin: 1%;
-    background: linear-gradient(hsl(272, 27%, 62%), hsl(272, 20%, 62%));
-    border-radius: 5%;
-    border-top: solid 5px hsl(272, 75%, 62%);
-    border-right: solid 5px hsl(272, 75%, 52%);
+menu {
+    width: 70%;
+    padding: 10px;
+    background: linear-gradient(hsl(178, 30%, 50%), hsl(178, 30%, 70%));
 }
 
 nav a.button {
-    display: block;
+    display: inline-flexbox;
     border-radius: 5px;
     padding: 5px;
     margin: 10px;
@@ -98,22 +86,46 @@ a.button:hover {
 
 img {
     padding: 10px;
-    width: 80%;
-    height:auto;
+    width: 100px;
     margin: auto;
 }
 
-div.gallery {
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery .item {
+    display: flex;
+    flex-direction: column;
     margin: 5px;
     padding: 5px;
-    float: left;
-    width: 300px;
-    align-content: center;
     border: 5px solid #d0a22f;
     box-shadow: 5px 5px hsl(44, 44%, 50%);
 }
 
-div.gallery:hover {
+.gallery .item:hover {
     box-shadow: none;
     margin: 10px 0 0 10px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    header h1 {
+        font-size: 30px;
+    }
+    header h2 {
+        font-size: 15px;
+    }
+    #page-title {
+        font-size: 20px;
+    }
+    #page-title::after {
+        border: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+
 }
