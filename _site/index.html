@@ -9,41 +9,53 @@
   </head>
 
   <body class="grid-container">
-    <icon>
-      <img src="https://raw.githubusercontent.com/ellezhu1/ellezhu1.github.io/refs/heads/publish/assets/images/Teacup.png"/>
-    </icon>
-    <header>
-      <a href="http://localhost:4000/"><h1>Michelle's Cups of Tea</h1></a>
-      <h4>A sample of my interests inspired by "Now that's my cup of tea!"</h4>
-    </header>
+    <a class="icon" href="http://localhost:4000/"></a>
 
-    <menu>
-      <nav>
+    <menu id="myMenu">
+      
+<nav>
+    <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">x</a>
     
-        <a href="/" class="button">
+        <a href="/" class="mybutton">
             Home
         </a>
     
-        <a href="/arts&crafts/" class="button">
+        <a href="/arts&crafts/" class="mybutton">
             Arts & Crafts
         </a>
     
-        <a href="/food&flavors/" class="button">
+        <a href="/food&flavors/" class="mybutton">
             Food & Flavors
         </a>
     
 </nav>
+
+<script>
+    function openNav() {
+        document.getElementById("myMenu").style.display = "block";
+    }
+    function closeNav() {
+        document.getElementById("myMenu").style.display = "none";
+    }
+</script>
     </menu>
+    <a class="menuBtn" onclick="openNav()">Menu</a>
+
+    <header id="top">
+      <a href="http://localhost:4000/"><h1>Michelle's Cups of Tea</h1></a>
+      <h4>A sample of my interests inspired by "Now that's my cup of tea!"</h4>
+    </header>
+
     <main>
-        <h1 id="page-title">Home</h1>
-        <h1>Welcome to my website!</h1>
+        <h2 id="page-title">Home</h2>
+        <div id="myContent"><h1>Welcome to my website!</h1>
 <img src="https://raw.githubusercontent.com/ellezhu1/ellezhu1.github.io/refs/heads/publish/assets/images/sinistea.png" />
 
-
+</div>
     </main>
     
     <footer>
-      <a href="#page-title">Return to top</a>
+      <a href="#top">Return to top</a>
     </footer>
   </body>
 </html>
