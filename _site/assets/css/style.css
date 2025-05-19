@@ -30,10 +30,10 @@ header, footer {
   padding: 10px 30px;
   background: linear-gradient(var(--tan), var(--lightTan), var(--tan));
   text-align: center;
-  box-shadow: 20px -2px 10px 0px #393939; }
+  box-shadow: 10px 0px 5px 0px #393939; }
 
 header h1 {
-  border-bottom: 5px dashed var(--coffee);
+  border-bottom: 2px solid var(--coffee);
   text-shadow: 5px 2px var(--darkTan); }
 
 header h1, header h4 {
@@ -41,7 +41,10 @@ header h1, header h4 {
   color: var(--coffee); }
 
 header a {
-  text-decoration: none; }
+  text-decoration: none;
+  width: fit-content;
+  display: block;
+  margin: 0 auto; }
 
 /* navigation */
 nav {
@@ -52,7 +55,7 @@ nav {
   padding-top: 10px;
   padding-bottom: 20px;
   background: linear-gradient(var(--darkLavender), var(--lavender));
-  box-shadow: 5px 5px #393939; }
+  box-shadow: -5px 5px #393939; }
 
 nav a.mybutton {
   display: block;
@@ -68,7 +71,7 @@ nav a.mybutton:hover {
 
 /* main content area */
 main {
-  z-index: 0;
+  z-index: -1;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -85,8 +88,8 @@ main {
   position: sticky;
   top: 10px;
   padding: 5px 30px;
-  background-color: var(--teal);
-  box-shadow: 15px 5px var(--darkLavender); }
+  background: linear-gradient(0.1turn, var(--teal), var(--lightTeal), var(--teal));
+  box-shadow: 15px 5px var(--lavender); }
 
 li {
   margin: 2% auto; }
@@ -200,7 +203,8 @@ img {
     background-image: url(https://raw.githubusercontent.com/ellezhu1/ellezhu1.github.io/refs/heads/publish/assets/images/Teacup.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: right; } }
+    background-position: right;
+    margin-right: 10px; } }
 @media only screen and (min-width: 1440px) {
   .grid-container {
     margin: 0 auto;
