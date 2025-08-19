@@ -1,0 +1,107 @@
+---
+import teacupLogo from '../assets/favicon.svg'
+import background from '../assets/background.svg';
+import surreal from '../assets/surrealportrait.png'
+import squirtleIcon from '../assets/squirtle.png'
+import squirtleJazwares from '../assets/MetallicFigure.png'
+---
+<img id="background" src={background.src} alt="" fetchpriority="high"/>
+<main>
+    <h1 id="page-title">
+        <img class="teacup" src={teacupLogo.src} alt="teacup logo"/>
+        My Projects
+        <img class="teacup" src={teacupLogo.src} alt="teacup logo"/>
+    </h1>
+    <div class="gallery">
+        <a class="item" href="https://squirtle-collection-michelle-zhus-projects.vercel.app/">
+            <img src={squirtleIcon.src} alt="squirtle icon"/>My Squirtle Collection</a>
+        <a class="item" href={surreal.src}>
+            <img src={surreal.src} alt="surrealistic self portrait" />
+            Surrealistic Self Portrait
+        </a>
+        <a class="item" href="https://squirtle-collection-michelle-zhus-projects.vercel.app/jazwares-figures">
+            <img src={squirtleJazwares.src} alt="jazwares Squirtle figure"/>
+            List of Jazwares Squirtle figures
+        </a>
+        
+    </div>
+</main>
+
+
+<style>
+    #background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        filter: blur(100px);
+    }
+
+    main {
+		height: 100%;
+		display: flex;
+        flex-direction: column;
+		justify-content: center;
+        border-left: 10px double #5d53ac;
+        border-right: 10px double #5d53ac;
+        margin: 0px 30px;
+        padding: 10px;
+        background-color: #bebade;
+        box-shadow: 15px 0px 10px #393939;
+	}
+
+    #page-title {
+        padding: 10px 20px;
+        background-color: #aae8e8;
+        box-shadow: 5px 5px #4336a2;
+    }
+
+    h1 {
+        color: #5d53ac;
+        align-self: first baseline;
+    }
+
+    img {
+        padding: 10px;
+        margin: auto;
+        width: 50%;
+    }
+
+    .gallery {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap; 
+        gap: 15px;
+    }
+
+    .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 300px;
+        margin: 5px;
+        border-radius: 5px;
+        padding: 5px;
+        text-align: center;
+        background-color: #aae8e8;
+        box-shadow: 10px 5px #5d53ac;
+    }
+
+    .item:hover {
+        box-shadow: none;
+        margin: 10px 0 0 10px; 
+    }
+
+    .teacup {
+        width: 50px;
+    }
+
+    @media screen and (max-width: 450px) {
+        .teacup {
+            display: none;
+        }
+    }
+
+</style>
