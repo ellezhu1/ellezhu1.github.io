@@ -24,8 +24,6 @@ body {
     background: linear-gradient(white 0%, var(--darkdarkTeal) 5%, white 100%);
 }
 
-/* header */
-
 header, footer {
     width: 95%;
     min-height: 4rem;
@@ -46,24 +44,24 @@ header h1,header h4 {
     margin: auto;
     color: var(--coffee);
 }
-header a {
-    text-decoration: none;
-    width: fit-content;
+header a ,footer a {
     display: block;
+    width: fit-content;
     margin: 0 auto;
+    color: var(--coffee);
 }
 
-/* navigation */
 nav {
-    position: fixed;
-    z-index: 3;
+    z-index: 2;
     height: fit-content;
-    border: 5px double var(--darkLavender);
-    padding-top: 10px;
-    padding-bottom: 20px;
+    padding: 10px;
     background: linear-gradient(var(--darkLavender), var(--lavender));
-    box-shadow: -5px 5px #393939;   
 }
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
 nav a.mybutton {
     display: block;
     height: auto;    
@@ -79,7 +77,6 @@ nav a.mybutton:hover {
 
 /* main content area */
 main {
-    z-index: -1;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -88,10 +85,11 @@ main {
     border-left: 10px double var(--darkLavender);    
     border-right: 10px double var(--darkLavender);
     padding: 10px;
-    background-color: var(--lightLavender);    
+    background: linear-gradient(var(--lightLavender), var(--lavender));    
     box-shadow: 15px 0px 10px #393939;
 }
-#page-title {  
+#page-title {
+    z-index: 1;  
     margin: 5px -40px;
     position: sticky;
     top: 10px;
@@ -104,10 +102,9 @@ li {
     margin: 2% auto;
 }
 
-/* images */
-img {
+.item img {
     padding: 10px;
-    margin: auto;
+    margin: 0 auto;
     height: 100px;
 }
 
@@ -134,41 +131,28 @@ img {
 }
 
 @media only screen and (max-width: 767px) { //Mobile-L
-    /* Layout */
     .grid-container {
         display: block;
     }
 
-    /* Navigation */
-    .menuBtn {
-        position: fixed;
-        z-index: 3;
-        display: block;
-        margin: 10px 0;
-        border: 5px double var(--darkTan);
-        padding: 10px;
-        color: var(--coffee);
-        background-color: var(--lightTan);
+    nav {
+        width: 80%;
+        margin: 0 auto;
+        border-style: double;
+        border-color: var(--darkLavender);
+        border-width: 5px 10px 0px 10px;
+        box-shadow: 15px 0px 10px #393939;
     }
     menu {
-        display: none;
-    }
-    nav {
-        padding-top: 50px;
-    }
-    .closeBtn {
-        color: #393939;
-        position: absolute;
-        font-size: 40px;
-        right: 10px;
-        top: 5px;
-        text-decoration: none;
+        padding: 0;
     }
 
     #page-title {
         width: 115%;
     }
-
+    img {
+        width: 100%;
+    }
     .gallery {
         flex-direction: column;
     }
@@ -182,7 +166,7 @@ img {
             'icon header header header header'
             'menu main main main main'
             'linkedin footer footer footer footer';
-            grid-auto-columns: 20%;
+        grid-auto-columns: 20%;
     }
 
     header {
@@ -191,21 +175,18 @@ img {
     footer {
         grid-area: footer;
     }
-    .menuBtn {
-        display: none;
+
+    nav {
+        position: fixed;
+        border: 5px double var(--darkLavender);
+        box-shadow: -5px 5px #393939; 
     }
     menu {
         grid-area: menu;
         padding: 10px;
         display: flex;
         flex-direction: row-reverse;
-        align-content: flex-end;
-        flex-wrap: wrap;
     }
-    .closeBtn {
-        display: none;
-    }
-
     main {
         grid-area: main;
         min-height: 50rem;
@@ -235,7 +216,7 @@ img {
     }
 }
 
-@media only screen and (min-width: 1440px) { //Desktop
+@media only screen and (min-width: 1440px) { // Desktop
     .grid-container {
         margin: 0 auto;
         width: 75%;

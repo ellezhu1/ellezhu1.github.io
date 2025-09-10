@@ -1,6 +1,8 @@
-- name: Home
+- name: Personal Website
   link: /
-- name: Arts & Crafts
-  link: /arts&crafts/
-- name: Food & Flavors
-  link: /food&flavors/
+- name: My Squirtle Collection
+  link: https://squirtle-collection-michelle-zhus-projects.vercel.app/
+- name: Jazwares Squirtle Figures
+  link: https://squirtle-collection-michelle-zhus-projects.vercel.app/jazwares-figures
+- name: Intreresting Reads
+  link: /interesting-reads
